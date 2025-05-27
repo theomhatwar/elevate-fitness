@@ -12,14 +12,6 @@ export default function Home() {
     <>
       <Navbar />
 
-      {/* Logo Overlay */}
-      <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-10">
-        <img
-          src="/newlogo.png"
-          alt="Elevate Fitness Logo"
-          className="w-[600px] h-[600px] opacity-20" // Adjust size and opacity as needed
-        />
-      </div>
 
       <div className="font-sans pt-16  antialiased relative">
         {/* green band */}
