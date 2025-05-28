@@ -7,8 +7,8 @@ const Timetable = () => {
     { day: 'Wednesday', hours: '06:00 am - 10:00 pm', offPeak: ['11:15 am - 09:45 pm', '01:15 am - 03:15 am'] },
     { day: 'Thursday', hours: '06:00 am - 10:00 pm', offPeak: ['11:15 am - 09:45 pm', '01:15 am - 03:15 am'] },
     { day: 'Friday', hours: '06:00 am - 10:00 pm', offPeak: ['11:15 am - 09:45 pm', '01:15 am - 03:15 am'] },
-    { day: 'Saturday', hours: '08:00 am - 08:00 pm', offPeak: ['01:15 pm - 01:15 am'] },
-    { day: 'Sunday', hours: '08:00 am - 08:00 pm', offPeak: ['01:15 pm - 01:15 am'] }
+    { day: 'Saturday', hours: '06:00 am - 10:00 pm', offPeak: ['01:15 pm - 01:15 am'] }
+    // { day: 'Sunday', hours: '08:00 am - 08:00 pm', offPeak: ['01:15 pm - 01:15 am'] }
   ];
 
   return (
@@ -34,7 +34,7 @@ const Timetable = () => {
     </section>
 
     {/* Off-Peak Hours */}
-    <section className="bg-white rounded-lg shadow-sm p-3">
+    <section className="bg-white hidden md:block  rounded-lg shadow-sm p-3">
       <div className="flex items-center mb-2">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
@@ -68,9 +68,9 @@ const Timetable = () => {
         <h2 className="text-xl font-semibold text-gray-900">Location</h2>
       </div>
       <address className="not-italic space-y-2">
-        <p className="text-gray-900 font-medium">120 Oxford Street</p>
-        <p className="text-gray-600">Entrance on Wells Street</p>
-        <p className="text-gray-900 font-medium">London W1D 1LT</p>
+        <p className="text-gray-900 font-medium">Manewada Road , Nagpur</p>
+        <p className="text-gray-600">Manewada ring road</p>
+        <p className="text-gray-900 font-medium">C-45 Shiv shakti nagar, amar nagar road , 440034</p>
       </address>
       <a 
         href="https://maps.google.com" 
@@ -86,7 +86,7 @@ const Timetable = () => {
       
       <div className="mt-6 p-4 bg-blue-50 rounded-lg">
         <p className="text-sm text-gray-700">
-          <strong className="font-semibold">Note:</strong> The Gym Group London Oxford Street may be remotely supervised on certain days to ensure your safety. 
+          <strong className="font-semibold">Note:</strong> The Gym Elevate Fitness may be remotely supervised on certain days to ensure your safety. 
           Learn more about our remotely supervised hours on our health and safety page.
         </p>
       </div>

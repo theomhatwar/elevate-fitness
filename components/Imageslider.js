@@ -26,15 +26,15 @@ const Imageslider = () => {
     };
 
     return (
-        <div>
-            <div className="w-full mx-auto  pt-10">
-                <h2 className="text-2xl font-bold text-center mb-8" style={{ color: 'rgb(46, 148, 255)' }}>
-                    inside the gym group london oxford street
+        <div className="w-full overflow-hidden px-0 sm:px-4">
+            <div className="w-full mx-auto pt-6 md:pt-10">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8" style={{ color: 'rgb(46, 148, 255)' }}>
+                    Inside The Gym - Elevate
                 </h2>
 
                 <div className="relative group">
                     {/* Slider container */}
-                    <div className="relative  h-64 md:h-[70vh] overflow-hidden  shadow-lg">
+                    <div className="relative w-full aspect-[4/3] sm:aspect-video h-auto max-h-[70vh] mx-auto overflow-hidden">
                         {/* Images */}
                         {images.map((image, index) => (
                             <div
@@ -45,32 +45,32 @@ const Imageslider = () => {
                                     src={image}
                                     alt={`Gym interior ${index + 1}`}
                                     className="w-full h-full object-cover"
+                                    loading="lazy"
                                 />
                             </div>
                         ))}
                     </div>
 
-                    {/* Navigation arrows */}
-                  <button
-    onClick={prevSlide}
-    className="absolute left-4 top-1/2 -translate-y-1/2 bg-white text-blue-700 p-2 rounded-full hover:bg-blue-100 transition-all duration-300 group-hover:opacity-100 opacity-0 md:opacity-100"
-    aria-label="Previous slide"
->
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-    </svg>
-</button>
+                    {/* Navigation arrows - always visible on mobile */}
+                    <button
+                        onClick={prevSlide}
+                        className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-blue-700 p-2 rounded-full shadow-md transition-all duration-300"
+                        aria-label="Previous slide"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
 
-<button
-    onClick={nextSlide}
-    className="absolute right-4 top-1/2 -translate-y-1/2 bg-white text-blue-700 p-2 rounded-full hover:bg-blue-100 transition-all duration-300 group-hover:opacity-100 opacity-0 md:opacity-100"
-    aria-label="Next slide"
->
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-    </svg>
-</button>
-
+                    <button
+                        onClick={nextSlide}
+                        className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-blue-700 p-2 rounded-full shadow-md transition-all duration-300"
+                        aria-label="Next slide"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
 
                     {/* Dots indicator */}
                     <div className="flex justify-center mt-4 space-x-2">

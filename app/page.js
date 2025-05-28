@@ -12,7 +12,6 @@ export default function Home() {
     <>
       <Navbar />
 
-
       <div className="font-sans pt-16  antialiased relative">
         {/* green band */}
         <div
@@ -68,15 +67,15 @@ export default function Home() {
           </svg>
           <span className="font-bold">50% OFF First Month</span>
         </div>
-        {/* Screen-size space for sliding photos */}
-        <div className="flex justify-around items-center p-4 bg-[rgb(229,239,250)] rounded-lg">
+        {/* intro */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-4 sm:p-6 bg-[rgb(229,239,250)] rounded-lg gap-4 sm:gap-6">
           {/* Left Content */}
-          <div className="space-y-4">
-            <h2 className="text-xl font-semibold text-gray-900">London Oxford Street</h2>
+          <div className="space-y-3 sm:space-y-4 w-full">
+            <h2 className="text-lg sm:text-xl font-semibold text-gray-900">Nagpur, Manewada Road</h2>
 
-            <div className="mt-1 text-sm text-gray-700 flex items-center gap-2">
+            <div className="text-sm sm:text-base text-gray-700 flex items-start gap-2">
               <svg
-                className="w-4 h-4 text-gray-600"
+                className="w-4 h-4 text-gray-600 mt-0.5 flex-shrink-0"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -88,12 +87,12 @@ export default function Home() {
                   d="M12 6v6l4 2M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
                 />
               </svg>
-              Opening hours • Full details
+              <span>Opening hours • Full details</span>
             </div>
 
-            <div className="mt-1 text-sm text-gray-700 flex items-center gap-2">
+            <div className="text-sm sm:text-base text-gray-700 flex items-start gap-2">
               <svg
-                className="w-4 h-4 text-gray-600"
+                className="w-4 h-4 text-gray-600 mt-0.5 flex-shrink-0"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -105,20 +104,26 @@ export default function Home() {
                   d="M17.657 16.657L13.414 12.414a4 4 0 10-1.414 1.414l4.243 4.243a1 1 0 001.414-1.414zM12 14a2 2 0 100-4 2 2 0 000 4z"
                 />
               </svg>
-              120 Oxford Street, Entrance on Wells Street, London, W1D 1LT
+              <span>C-45 Shiv shakti nagar amar nagar road, ring road, Manewada, Nagpur, Maharashtra 440034</span>
             </div>
           </div>
 
-          {/* Right Content */}
-          <div className="bg-white px-6 py-4 rounded-xl shadow text-center min-w-[140px]">
-            <p className="text-base text-gray-600">from</p>
-            <p className="text-2xl font-bold text-blue-800">£28.99</p>
-            <p className="text-base text-gray-600">per month</p>
+          {/* Right Content - Price Box */}
+          <div className="bg-white px-4 py-3 sm:px-6 sm:py-4 rounded-xl shadow text-center w-full md:w-auto min-w-[140px] self-center sm:self-auto">
+            <p className="text-sm sm:text-base text-gray-600">from</p>
+            <p className="text-xl sm:text-2xl font-bold text-blue-800">₹1500.00</p>
+            <p className="text-sm sm:text-base text-gray-600">per month</p>
           </div>
-
         </div>
 
-        {/* gym Deals */}
+    <div
+  className="w-full h-[40vh] sm:h-[45vh] md:h-[50vh] lg:h-[53vh] bg-cover bg-center"
+  style={{ backgroundImage: "url('/fit-individual-doing-sport.jpg')" }}
+></div>
+
+
+
+
         <Gymdeals />
 
         <Ourplans />
@@ -129,6 +134,7 @@ export default function Home() {
 
         <Timetable />
 
+        {/* facilities */}
         <div className="bg-blue-700 text-white py-12 px-4 sm:px-6">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold mb-10 text-center">FACILITIES</h2>
@@ -137,15 +143,17 @@ export default function Home() {
               {/* Spacious Gym */}
               <div className="flex items-start space-x-4">
                 <div className="bg-blue-600 p-3 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                  {/* New Shower Icon */}
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="w-6 h-6 text-white">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 4l16 0M17 4v1a5 5 0 01-10 0V4M8 16h.01M8 20h.01M12 18h.01M12 22h.01M16 16h.01M16 20h.01" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Spacious Gym</h3>
-                  <p className="text-blue-100">Our gyms are bright with a laid-back atmosphere</p>
+                  <h3 className="text-xl font-semibold mb-2">Refreshing Showers</h3>
+                  <p className="text-blue-100">Clean and private shower facilities available for all members</p>
                 </div>
               </div>
+
 
               {/* Changing Rooms */}
               <div className="flex items-start space-x-4">
@@ -215,6 +223,7 @@ export default function Home() {
           </div>
         </div>
 
+        {/* images */}
         <div className="w-full mx-auto px-4 sm:px-6 py-12 md:py-16">
           {/* Full-width image with container */}
           <div className="w-full h-64 md:h-96 lg:h-[28rem]  overflow-hidden shadow-lg mb-8">
@@ -237,7 +246,6 @@ export default function Home() {
 
           </div>
         </div>
-
         <div className="w-full mx-auto px-4 sm:px-6 py-12 md:py-16">
           {/* Full-width image with container */}
           <div className="w-full h-64 md:h-96 lg:h-[28rem]  overflow-hidden shadow-lg mb-8">
@@ -261,56 +269,7 @@ export default function Home() {
         </div>
 
         <Footer />
-        <div className="py-10 px-4" style={{ backgroundColor: 'rgb(46, 148, 255)' }}>
-          <div className="max-w-7xl mx-auto">
 
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
-              {/* Sunday Times Award */}
-              <div className="flex flex-col items-center">
-                <div className="h-20 w-48 relative">
-                  <img
-                    src="https://www.thegymgroup.com/_next/image/?url=%2Fywnqh%2Fimages%2Fsunday-times_2024.png&w=256&q=100"
-                    alt="Sunday Times Award"
-                    className="object-contain w-full h-full"
-                  />
-                </div>
-              </div>
-
-              {/* Carbon Neutral Award */}
-              <div className="flex flex-col items-center">
-                <div className="h-20 w-20 relative">
-                  <img
-                    src="https://www.thegymgroup.com/_next/image/?url=%2Fywnqh%2Fimages%2Fcarbon-neutral.png&w=96&q=100"
-                    alt="Carbon Neutral Certified"
-                    className="object-contain w-full h-full"
-                  />
-                </div>
-              </div>
-
-              {/* Investors in People Gold */}
-              <div className="flex flex-col items-center">
-                <div className="h-20 w-48 relative">
-                  <img
-                    src="https://www.thegymgroup.com/_next/image/?url=%2Fywnqh%2Fimages%2Finvest-in-people-gold.png&w=256&q=100"
-                    alt="Investors in People Gold Award"
-                    className="object-contain w-full h-full"
-                  />
-                </div>
-              </div>
-
-              {/* Glassdoor Award */}
-              <div className="flex flex-col items-center">
-                <div className="h-20 w-36 relative">
-                  <img
-                    src="https://www.thegymgroup.com/_next/image/?url=%2Fywnqh%2Fimages%2Fglassdoor-2022.png&w=256&q=100"
-                    alt="Glassdoor Best Places to Work 2022"
-                    className="object-contain w-full h-full"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </>
   );

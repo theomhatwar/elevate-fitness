@@ -6,7 +6,7 @@ const Gymdeals = () => {
             <div className="bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <h1 className="text-center text-xl sm:text-2xl font-bold mb-8" style={{ color: 'rgb(46, 148, 255)' }}>
-                        gym deals london oxford street
+                        Gym deals , Elevate Fitness
                     </h1>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {/* Card 1 */}
@@ -70,7 +70,7 @@ const Gymdeals = () => {
                                 </div>
                                 <hr className="border-t border-gray-200 my-4" />
                                 <p className="text-gray-600 text-sm">
-                                    Save up to £25. Join today – offer on ultimate, standard & off peak monthly memberships only.
+                                    Save up to ₹500. Join today – offer on ultimate, standard & off peak monthly memberships only.
                                 </p>
                             </div>
                         </div>
@@ -100,7 +100,7 @@ const Gymdeals = () => {
                                 </div>
                                 <hr className="border-t border-gray-200 my-4" />
                                 <p className="text-gray-600 text-sm">
-                                    Save up to £125 with 25% off our ultimate, standard or student 12 month saver memberships.
+                                    Save up to ₹3000 with 25% off our ultimate, standard or student 12 month saver memberships.
                                 </p>
                             </div>
                         </div>
